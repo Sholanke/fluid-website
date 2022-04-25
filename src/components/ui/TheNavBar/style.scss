@@ -1,0 +1,53 @@
+.the-nav-bar {
+  position: relative;
+  z-index: 4;
+  background: #fff;
+
+  &__logo {
+    svg {
+      height: 22px;
+      width: auto;
+    }
+  }
+
+  &__section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    > div,
+    > ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    ul {
+      li {
+        margin: 0 22px;
+
+        a {
+          opacity: 0.8;
+
+          &.active {
+            font-weight: 600;
+            opacity: 1;
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+
+    button {
+      margin-left: 16px;
+      padding: 12px 36px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+}

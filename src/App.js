@@ -1,25 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Route, Routes, useLocation } from "react-router";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import Footer from "./components/ui/Footer/Footer";
+import TheNavBar from "./components/ui/TheNavBar/TheNavBar";
+import { BusinessPage } from "./pages/Business";
+import { DeveloperPage } from "./pages/Developer";
+import { HomePage } from "./pages/Home";
+import { SimulatorPage } from "./pages/Simulator";
 
-function App() {
+export default function App() {
+  const location = useLocation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <TheNavBar />
+
+      <TransitionGroup component={null}>
+        <CSSTransition key={location.key} classNames="fade" timeout={400}>
+          <Routes location={location}>
+            <Route
+              path="/developer"
+              element={
+                <main>
+                  <DeveloperPage />
+                  <Footer />
+                </main>
+              }
+            />
+            <Route
+              path="/business"
+              element={
+                <main>
+                  <BusinessPage />
+                  <Footer />
+                </main>
+              }
+            />
+            <Route
+              path="/simulator"
+              element={
+                <main>
+                  <SimulatorPage />
+                  <Footer />
+                </main>
+              }
+            />
+            <Route
+              path="*"
+              element={
+                <main>
+                  <HomePage />
+                  <Footer />
+                </main>
+              }
+            />
+          </Routes>
+        </CSSTransition>
+      </TransitionGroup>
+
+      {/* <Footer /> */}
+    </>
   );
 }
-
-export default App;
