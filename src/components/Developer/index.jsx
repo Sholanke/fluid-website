@@ -11,7 +11,11 @@ export default function Index() {
 
   return (
     <>
-      <BusinessPageHero>
+      <BusinessPageHero
+        src={
+          "https://images.unsplash.com/photo-1549692520-acc6669e2f0c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8ZGV2ZWxvcGVyc3xlbnwwfHwwfHw%3D&w=1000&q=80"
+        }
+      >
         <>
           <h1>
             <strong className="color-gradient">Integrate Fluid</strong> to your

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.scss";
 import arrowIcon from "../../assets/images/arrow-down.svg";
 
@@ -6,37 +6,126 @@ const industries = [
   {
     checked: true,
     name: "Ecommerce",
+    src: "https://images.squarespace-cdn.com/content/v1/572e522f044262a7f8bb164f/1509467650324-MAVH2BWW0OC7G5R9RBR4/online+shopping+cover+photo.jpg?format=1500w",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
   },
   {
     name: "Gaming",
+    src: "https://media.istockphoto.com/photos/asian-chinese-sibling-brother-sitting-on-sofa-playing-online-video-picture-id1299947977?b=1&k=20&m=1299947977&s=170667a&w=0&h=7nLM0WMYFjvBhrRhvVzJkOXc_TlZng_KLTXs9lOM9U0=",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
   },
   {
     name: "Apps & Websites",
+    src: "https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YXBwbGljYXRpb24lMjBkZXNpZ258ZW58MHx8MHx8&w=1000&q=80",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
   },
   {
     name: "Marketing & Advertising",
+    src: "https://images.unsplash.com/photo-1557858310-9052820906f7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YWR2ZXJ0aXNpbmd8ZW58MHx8MHx8&w=1000&q=80",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
   },
   {
     name: "Interactive Public Displays",
+    src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8dmlydHVhbCUyMHNjcmVlbnxlbnwwfHwwfHw%3D&w=1000&q=80",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
   },
   {
     name: "Smart Home & Automobiles",
+    src: "https://media.istockphoto.com/photos/beautiful-woman-activating-a-lock-system-at-her-smart-home-smiling-picture-id1208382111?b=1&k=20&m=1208382111&s=170667a&w=0&h=2nWvNEpDRv2ZeA_YCKUDpPwky3Zp4j1sXD0-619oDA4=",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
   },
 ];
 
 export default function Index() {
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const heroSliderList = [
+    {
+      text: "Static Gestures & Dynamic Actions",
+      src: "https://www.wallpaperflare.com/static/759/378/531/mi-vr-xiaomi-vr-virtual-reality-wallpaper.jpg",
+    },
+    {
+      text: "Touchless Device control",
+      src: "https://media.istockphoto.com/photos/happy-young-man-using-virtual-reality-glasses-picture-id1306303354?b=1&k=20&m=1306303354&s=170667a&w=0&h=6s5YyqmIcoEgjqy-h47T4qcRfT7wirCnWWyVnqbgpQg=",
+    },
+    {
+      text: "Static Gestures & Dynamic Actions",
+      src: "https://www.wallpaperflare.com/static/759/378/531/mi-vr-xiaomi-vr-virtual-reality-wallpaper.jpg",
+    },
+    {
+      text: "Touchless Device control",
+      src: "https://media.istockphoto.com/photos/happy-young-man-using-virtual-reality-glasses-picture-id1306303354?b=1&k=20&m=1306303354&s=170667a&w=0&h=6s5YyqmIcoEgjqy-h47T4qcRfT7wirCnWWyVnqbgpQg=",
+    },
+    {
+      text: "Static Gestures & Dynamic Actions",
+      src: "https://www.wallpaperflare.com/static/759/378/531/mi-vr-xiaomi-vr-virtual-reality-wallpaper.jpg",
+    },
+    {
+      text: "Touchless Device control",
+      src: "https://media.istockphoto.com/photos/happy-young-man-using-virtual-reality-glasses-picture-id1306303354?b=1&k=20&m=1306303354&s=170667a&w=0&h=6s5YyqmIcoEgjqy-h47T4qcRfT7wirCnWWyVnqbgpQg=",
+    },
+    {
+      text: "Static Gestures & Dynamic Actions",
+      src: "https://www.wallpaperflare.com/static/759/378/531/mi-vr-xiaomi-vr-virtual-reality-wallpaper.jpg",
+    },
+    {
+      text: "Touchless Device control",
+      src: "https://media.istockphoto.com/photos/happy-young-man-using-virtual-reality-glasses-picture-id1306303354?b=1&k=20&m=1306303354&s=170667a&w=0&h=6s5YyqmIcoEgjqy-h47T4qcRfT7wirCnWWyVnqbgpQg=",
+    },
+    {
+      text: "Static Gestures & Dynamic Actions",
+      src: "https://www.wallpaperflare.com/static/759/378/531/mi-vr-xiaomi-vr-virtual-reality-wallpaper.jpg",
+    },
+    {
+      text: "Touchless Device control",
+      src: "https://media.istockphoto.com/photos/happy-young-man-using-virtual-reality-glasses-picture-id1306303354?b=1&k=20&m=1306303354&s=170667a&w=0&h=6s5YyqmIcoEgjqy-h47T4qcRfT7wirCnWWyVnqbgpQg=",
+    },
+    {
+      text: "Static Gestures & Dynamic Actions",
+      src: "https://www.wallpaperflare.com/static/759/378/531/mi-vr-xiaomi-vr-virtual-reality-wallpaper.jpg",
+    },
+    {
+      text: "Touchless Device control",
+      src: "https://media.istockphoto.com/photos/happy-young-man-using-virtual-reality-glasses-picture-id1306303354?b=1&k=20&m=1306303354&s=170667a&w=0&h=6s5YyqmIcoEgjqy-h47T4qcRfT7wirCnWWyVnqbgpQg=",
+    },
+  ];
+
+  const [industry, setIndustry] = useState(industries[0]);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const next = () => {
+    setActiveIndex((prev) =>
+      prev === heroSliderList.length - 1 ? prev : prev + 1
+    );
+  };
+
+  const previous = () => {
+    setActiveIndex((prev) => (prev === 0 ? prev : prev - 1));
+  };
+
+  const generateClass = (index) => {
+    if (activeIndex === heroSliderList.length - 1)
+      if (index === 0) return "next";
+    if (activeIndex === 0)
+      if (index === heroSliderList.length - 1) return "done";
+    if (index < activeIndex) return "done";
+    else if (index === activeIndex) return "active";
+    else if (index - 1 === activeIndex) return "next";
+    return "inActive";
+  };
+
+  const handleIndustryChange = ({ currentTarget: { value } }) => {
+    const _industry = industries.filter((industry) => {
+      return industry.name.toLocaleLowerCase() === value;
+    })[0];
+    setIndustry(_industry);
+  };
+
   return (
     <>
       <div className="app-container">
@@ -120,10 +209,20 @@ export default function Index() {
               <p>Play Video</p>
             </div>
 
-            <div className="home__hero__image__illustration"></div>
+            <div className="home__hero__image__illustration">
+              {heroSliderList.map(({ src }, index) => (
+                <div
+                  className={`image-container ${
+                    index === activeIndex ? "active" : ""
+                  } ${index < activeIndex ? "done" : ""}`}
+                >
+                  <img src={src} alt="" srcset="" key={index} />
+                </div>
+              ))}
+            </div>
             <div className="home__hero__image__line"></div>
             <div className="home__hero__image__text">
-              <button>
+              <button onClick={previous}>
                 <svg
                   width="27"
                   height="27"
@@ -147,8 +246,14 @@ export default function Index() {
                   />
                 </svg>
               </button>
-              <p>Static Gestures & Dynamic Actions</p>
-              <button>
+              <p>
+                {heroSliderList.map(({ text }, index) => (
+                  <span className={generateClass(index)} key={index}>
+                    {text}
+                  </span>
+                ))}
+              </p>
+              <button onClick={next}>
                 <svg
                   width="27"
                   height="27"
@@ -247,9 +352,18 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="app-container">
+      <div className="app-container home__usable-container">
         <div className="app-container__section home__usable">
-          <div className="img"></div>
+          <div className="img">
+            {industries.map((i) => (
+              <img
+                src={i.src}
+                className={`${i.name === industry.name ? "active" : ""}`}
+                alt=""
+                srcset=""
+              />
+            ))}
+          </div>
           <div className="text">
             <h3 className="text__heading">
               Usable in{" "}
@@ -261,7 +375,11 @@ export default function Index() {
             </p>
 
             {industries.map((i) => (
-              <UsableIn checked={i.checked} {...i} />
+              <UsableIn
+                onChange={handleIndustryChange}
+                checked={i.checked}
+                {...i}
+              />
             ))}
           </div>
         </div>
@@ -270,10 +388,17 @@ export default function Index() {
   );
 }
 
-function UsableIn({ checked, name, description }) {
+function UsableIn({ checked, name, description, onChange }) {
   return (
     <label className="home__usable__use-container">
-      <input defaultChecked={checked} type="radio" name="use" id="use" />
+      <input
+        defaultChecked={checked}
+        onChange={onChange}
+        value={name.toLocaleLowerCase()}
+        type="radio"
+        name="use"
+        id="use"
+      />
       <div className="home__usable__use">
         <div className="home__usable__use__header">
           <span>

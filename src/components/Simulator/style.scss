@@ -39,6 +39,9 @@
 .simulator__form {
   margin-top: 128px;
   margin-bottom: 128px;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
 
   h3 {
     font-size: 48px;
@@ -58,8 +61,6 @@
   }
 
   form {
-    max-width: 750px;
-
     .grid {
       display: grid;
       grid-gap: 40px;
@@ -84,7 +85,7 @@
         background: #f1f4ff;
         font-size: 16px;
         border-radius: 100vh;
-        padding: 15px 20px;
+        padding: 19px 20px;
         width: 100%;
 
         &::placeholder {

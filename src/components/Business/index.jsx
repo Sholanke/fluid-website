@@ -5,7 +5,11 @@ import arrowIcon from "../../assets/images/arrow-down.svg";
 export default function index() {
   return (
     <>
-      <BusinessPageHero />
+      <BusinessPageHero
+        src={
+          "https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YnVzaW5lc3MlMjBlZHVjYXRpb258ZW58MHx8MHx8&w=1000&q=80"
+        }
+      />
 
       {/* supported industries */}
       <div className="app-container">
@@ -32,7 +36,7 @@ export default function index() {
   );
 }
 
-export function BusinessPageHero({ children }) {
+export function BusinessPageHero({ children, src }) {
   return (
     <div className="app-container">
       <div className="app-container__section business__hero">
@@ -54,7 +58,7 @@ export function BusinessPageHero({ children }) {
             </>
           )}
         </div>
-        <div className="img"></div>
+        <div className="img" style={{ "--bg": `url(${src})` }}></div>
       </div>
     </div>
   );
