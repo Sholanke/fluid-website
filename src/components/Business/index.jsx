@@ -32,24 +32,27 @@ export default function index() {
   );
 }
 
-export function BusinessPageHero() {
+export function BusinessPageHero({ children }) {
   return (
     <div className="app-container">
       <div className="app-container__section business__hero">
         <div className="text">
-          <h1>
-            <strong className="color-gradient">Grow your business</strong> by
-            improving visitor & <span>user interaction</span>
-          </h1>
-          <p>
-            Try out a more customized experience business by simulating your
-            platform in the Fluid simulator.
-          </p>
-
-          <button className="btn--primary">
-            Join Fluid Today
-            <img src={arrowIcon} alt="" srcSet="" />
-          </button>
+          {children || (
+            <>
+              <h1>
+                <strong className="color-gradient">Grow your business</strong>{" "}
+                by improving visitor & <span>user interaction</span>
+              </h1>
+              <p>
+                Try out a more customized experience business by simulating your
+                platform in the Fluid simulator.
+              </p>
+              <button className="btn--primary">
+                Join Fluid Today
+                <img src={arrowIcon} alt="" srcSet="" />
+              </button>
+            </>
+          )}
         </div>
         <div className="img"></div>
       </div>

@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.scss";
 import arrowIcon from "../../../assets/images/arrow-down.svg";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -17,14 +18,28 @@ export default function Footer() {
             </p>
 
             <div className="home__ready__btn-holder">
-              <button className="btn--primary">
+              <Link to="/developer" className="btn--primary">
                 For Developers
-                <img src={arrowIcon} alt="" srcSet="" />
-              </button>
-              <button className="btn--primary">
+                <img
+                  style={{ transform: "rotate(-90deg)" }}
+                  src={arrowIcon}
+                  alt=""
+                  srcSet=""
+                />
+              </Link>
+              <Link
+                to="/business"
+                style={{ background: "#5C98FF" }}
+                className="btn--primary"
+              >
                 For Businesses
-                <img src={arrowIcon} alt="" srcSet="" />
-              </button>
+                <img
+                  style={{ transform: "rotate(-90deg)" }}
+                  src={arrowIcon}
+                  alt=""
+                  srcSet=""
+                />
+              </Link>
             </div>
           </div>
 

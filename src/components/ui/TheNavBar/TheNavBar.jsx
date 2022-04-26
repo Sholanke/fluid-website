@@ -6,7 +6,7 @@ export default function TheNavBar() {
   return (
     <div className="app-container the-nav-bar">
       <div className="app-container__section the-nav-bar__section">
-        <div className="the-nav-bar__logo">
+        <NavLink to="/" className="the-nav-bar__logo">
           <svg
             width="127"
             height="32"
@@ -47,7 +47,7 @@ export default function TheNavBar() {
               </clipPath>
             </defs>
           </svg>
-        </div>
+        </NavLink>
 
         <ul>
           <li>

@@ -19,6 +19,15 @@ export default function App() {
         <CSSTransition key={location.key} classNames="fade" timeout={400}>
           <Routes location={location}>
             <Route
+              path="/"
+              element={
+                <main>
+                  <HomePage />
+                  <Footer />
+                </main>
+              }
+            />
+            <Route
               path="/developer"
               element={
                 <main>
@@ -49,7 +58,17 @@ export default function App() {
               path="*"
               element={
                 <main>
-                  <HomePage />
+                  <br />
+                  <br />
+                  <br />
+                  <div className="app-container">
+                    <div className="app-container__section">
+                      <h1>Not Found</h1>
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+                  <br />
                   <Footer />
                 </main>
               }

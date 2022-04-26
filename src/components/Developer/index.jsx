@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { BusinessPageHero, BusinessPageReasons } from "../Business";
 import "./style.scss";
 import arrowIcon from "../../assets/images/arrow-down.svg";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   useEffect(() => {
@@ -10,7 +11,22 @@ export default function Index() {
 
   return (
     <>
-      <BusinessPageHero />
+      <BusinessPageHero>
+        <>
+          <h1>
+            <strong className="color-gradient">Integrate Fluid</strong> to your
+            web & mobile platform.
+          </h1>
+          <p>
+            Try out a more customized experience business by simulating your
+            platform in the Fluid simulator.
+          </p>
+          <button className="btn--primary">
+            Join Fluid Today
+            <img src={arrowIcon} alt="" srcSet="" />
+          </button>
+        </>
+      </BusinessPageHero>
 
       <div className="app-container developer__code-container">
         <div className="app-container__section developer__code">
@@ -49,10 +65,9 @@ export default function Index() {
               platform by simulating your platform in the Fluid simulator.
             </p>
 
-            <button className="btn--primary">
+            <Link to="/simulator" className="btn--primary">
               Simulate Platform
-              <img src={arrowIcon} alt="" srcSet="" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

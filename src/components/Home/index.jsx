@@ -2,6 +2,40 @@ import React from "react";
 import "./style.scss";
 import arrowIcon from "../../assets/images/arrow-down.svg";
 
+const industries = [
+  {
+    checked: true,
+    name: "Ecommerce",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+  },
+  {
+    name: "Gaming",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+  },
+  {
+    name: "Apps & Websites",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+  },
+  {
+    name: "Marketing & Advertising",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+  },
+  {
+    name: "Interactive Public Displays",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+  },
+  {
+    name: "Smart Home & Automobiles",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod",
+  },
+];
+
 export default function Index() {
   return (
     <>
@@ -19,10 +53,10 @@ export default function Index() {
               eiusmod tempor incididunt ut
             </p>
 
-            <button className="btn--primary">
+            <a href="#fluid-ride" className="btn--primary">
               Take Fluid for a Ride
               <img src={arrowIcon} alt="" srcSet="" />
-            </button>
+            </a>
 
             <svg
               width="46"
@@ -35,7 +69,6 @@ export default function Index() {
               <path
                 d="M41 5L23 23L5 5"
                 stroke="#DAE0FA"
-                stroke-opacity="0.6"
                 stroke-width="9"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -43,7 +76,6 @@ export default function Index() {
               <path
                 d="M41 40L23 58L5 40"
                 stroke="#DAE0FA"
-                stroke-opacity="0.3"
                 stroke-width="9"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -51,7 +83,6 @@ export default function Index() {
               <path
                 d="M41 75L23 93L5 75"
                 stroke="#DAE0FA"
-                stroke-opacity="0.2"
                 stroke-width="9"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -146,7 +177,7 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="app-container">
+      <div className="app-container" id="fluid-ride">
         <div className="app-container__section home__ride">
           <h2>
             Take <strong className="color-gradient">Fluid</strong> for a ride.
@@ -192,10 +223,10 @@ export default function Index() {
                 eiusmod tempor incididunt ut
               </p>
 
-              <button className="btn--primary">
+              <a href="#fluid-ride" className="btn--primary">
                 Experience Fluid in 3D
                 <img src={arrowIcon} alt="" srcSet="" />
-              </button>
+              </a>
             </div>
             <div className="image"></div>
           </div>
@@ -204,8 +235,6 @@ export default function Index() {
 
       <div className="app-container home__magic-container">
         <div className="app-container__section home__magic">
-          <div className="img"></div>
-
           <div className="text">
             <h3 className="color-gradient">
               Like Magic, <br /> But Real
@@ -231,12 +260,9 @@ export default function Index() {
               eiusmod
             </p>
 
-            <UsableIn checked />
-            <UsableIn />
-            <UsableIn />
-            <UsableIn />
-            <UsableIn />
-            <UsableIn />
+            {industries.map((i) => (
+              <UsableIn checked={i.checked} {...i} />
+            ))}
           </div>
         </div>
       </div>
@@ -244,7 +270,7 @@ export default function Index() {
   );
 }
 
-function UsableIn({ checked }) {
+function UsableIn({ checked, name, description }) {
   return (
     <label className="home__usable__use-container">
       <input defaultChecked={checked} type="radio" name="use" id="use" />
@@ -268,11 +294,8 @@ function UsableIn({ checked }) {
           </span>
 
           <div>
-            <h5>Ecommerce</h5>
-            <p className="home__usable__use__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod
-            </p>
+            <h5>{name}</h5>
+            <p className="home__usable__use__description">{description}</p>
 
             <a className="home__usable__use__link" href="/">
               See It In Action{" "}

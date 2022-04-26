@@ -1,5 +1,4 @@
 import React from "react";
-import arrowIcon from "../../assets/images/arrow-down.svg";
 import "./style.scss";
 
 export default function index() {
@@ -273,10 +272,7 @@ export default function index() {
               </div>
             </div>
 
-            <button className="btn--primary">
-              Join Fluid Today
-              <img src={arrowIcon} alt="" srcSet="" />
-            </button>
+            <button className="btn--primary">Join Fluid Today</button>
           </form>
         </div>
       </div>
