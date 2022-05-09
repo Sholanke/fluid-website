@@ -42,7 +42,7 @@
     span {
       letter-spacing: 2px;
       opacity: 0.7;
-      font-size: 18px;
+
       font-weight: 600;
     }
     h1 {
@@ -59,11 +59,11 @@
     }
 
     p {
-      font-size: 18px;
       max-width: 438px;
       line-height: 1.8;
       margin-top: 20px;
       opacity: 0.8;
+      font-size: 18px;
       margin-bottom: 42px;
     }
 
@@ -173,13 +173,18 @@
       position: absolute;
       z-index: 1;
       right: 0;
-      bottom: 20px;
+      bottom: -10px;
       max-width: 200px;
 
       button {
         margin-left: auto;
         display: block;
         border: none;
+
+        svg {
+          height: 42px;
+          width: 42px;
+        }
       }
       p {
         background-color: #2f4d7e;
@@ -288,7 +293,7 @@
         }
 
         h3 {
-          font-weight: 700;
+          font-weight: 600;
           font-size: 22px;
         }
       }
@@ -321,7 +326,6 @@
     margin: 20px auto;
     line-height: 1.9;
     opacity: 0.8;
-    font-size: 18px;
   }
 
   &__tab-ctrl {
@@ -333,7 +337,7 @@
       flex: 1;
       border: 0;
       padding: 10px 0;
-      font-size: 22px;
+      font-size: 18px;
       border-bottom: 1px solid rgba(89, 102, 129, 0.24);
       letter-spacing: -0.7px;
 
@@ -360,7 +364,7 @@
       }
       p {
         max-width: 324px;
-        font-size: 18px;
+
         line-height: 1.9;
         opacity: 0.8;
         margin: 10px 0 40px 0;
@@ -422,10 +426,10 @@
       ) !important;
     }
     p {
-      font-size: 18px;
       line-height: 1.9;
       opacity: 0.8;
       color: #fff;
+      font-size: 18px;
       max-width: 350px;
       margin: 20px 0 0 0;
     }
@@ -453,7 +457,7 @@
     border-bottom-right-radius: 40px;
     transform: translate(-80px, 0);
     position: sticky;
-    top: 70px;
+    top: 140px;
     overflow: hidden;
 
     img {
@@ -465,10 +469,12 @@
       top: 0;
       left: 0;
       opacity: 0;
+      transform: scale(1.2);
       transition: 0.4s ease-in-out;
 
       &.active {
         opacity: 1;
+        transform: scale(1);
       }
     }
   }
@@ -479,7 +485,7 @@
     padding-bottom: 180px;
 
     &__heading {
-      font-size: 58px;
+      font-size: 55px;
       line-height: 1.2;
       letter-spacing: -2.5px;
 
@@ -489,7 +495,6 @@
     }
 
     &__description {
-      font-size: 18px;
       max-width: 400px;
       margin: 20px 0;
       line-height: 1.7;
@@ -580,16 +585,16 @@
       }
 
       h5 {
-        font-size: 18px;
-        margin-top: 3px;
         color: var(--primary-color);
         transition: 0.3s ease;
+        font-size: 16px;
+        font-weight: 600;
       }
     }
 
     &__description {
       margin-top: 20px;
-      line-height: 1.6;
+      line-height: 1.8;
       max-width: 300px;
       transition: 0.3s ease;
       opacity: 0.8;

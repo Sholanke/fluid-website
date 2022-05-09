@@ -1,12 +1,16 @@
 .the-nav-bar {
-  position: relative;
+  // position: relative;
   z-index: 4;
   background: #fff;
-  box-shadow: 0 0 30px rgba(99, 94, 141, 0.151);
+  // box-shadow: 0 0 30px rgba(99, 94, 141, 0.151);
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // width: 100%;
 
   &__logo {
     svg {
-      height: 22px;
+      height: 32px;
       width: auto;
     }
   }
@@ -16,7 +20,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding-top: 20px;
+    padding-top: 40px;
     padding-bottom: 20px;
 
     > div,
@@ -28,7 +32,7 @@
 
     ul {
       li {
-        margin: 0 22px;
+        margin: 0 18px;
 
         a {
           opacity: 0.8;

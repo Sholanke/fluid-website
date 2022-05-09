@@ -7,7 +7,7 @@
 
 * {
   // font-family: "HK Grotesk Legacy";
-  font-family: "Poppins";
+  font-family: "Open Sans", sans-serif;
   padding: 0;
   margin: 0;
   background: transparent;
@@ -18,14 +18,16 @@
   outline: none;
 }
 
-html, * {
-  scroll-behavior: smooth;
-}
-
 body {
   font-size: 16px;
-  height: 100vh;
-  overflow: hidden;
+}
+
+main {
+  position: absolute;
+  // padding-top: 82px;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .app-container {
@@ -36,6 +38,18 @@ body {
     max-width: 1138px;
     margin-right: auto;
     margin-left: auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  &,
+  * {
+    font-family: "Poppins", sans-serif;
   }
 }
 
@@ -69,17 +83,17 @@ button {
 }
 
 .color-gradient {
-  background: linear-gradient(90deg, #075ef7, #072ac8, #728af3, #075ef7);
+  background: linear-gradient(90deg, #075ef7, #072ac8, #8fa3ff, #075ef7);
   width: fit-content;
   background-clip: text;
   animation-name: shimmer;
-  animation-duration: 6s;
+  animation-duration: 4s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 
   @keyframes shimmer {
     50% {
-      background-position-x: 300px;
+      background-position-x: 500px;
     }
   }
 
@@ -87,16 +101,6 @@ button {
   & {
     color: transparent !important;
   }
-}
-
-main {
-  position: absolute;
-  padding-top: 82px;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: auto;
 }
 
 // animation group

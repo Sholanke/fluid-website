@@ -284,21 +284,21 @@ export default function Index() {
 
       <div className="app-container" id="fluid-ride">
         <div className="app-container__section home__ride">
-          <h2>
+          <h2 data-aos="fade-up">
             Take <strong className="color-gradient">Fluid</strong> for a ride.
           </h2>
 
-          <div className="home__ride__video"></div>
+          <div className="home__ride__video" data-aos="fade-up"></div>
         </div>
       </div>
 
       <div className="app-container home__why-container">
         <div className="app-container__section home__why">
-          <h2>
+          <h2 data-aos="fade-up">
             Why <strong className="color-gradient">Fluid?</strong>
           </h2>
 
-          <div className="video home__why__reasons">
+          <div className="video home__why__reasons" data-aos="fade-up">
             <HomeReason />
             <HomeReason />
             <HomeReason />
@@ -308,32 +308,34 @@ export default function Index() {
 
       <div className="app-container">
         <div className="app-container__section home__navigation">
-          <h2>
+          <h2 data-aos="fade-up">
             Navigation <strong className="color-gradient">Capabilities</strong>
           </h2>
-          <p className="home__navigation__description">
+          <p className="home__navigation__description" data-aos="fade-up">
             Interact with 2D platforms, softwares and applications or manipulate
             objects in 3D environments.
           </p>
 
-          <div className="home__navigation__tab-ctrl">
+          <div className="home__navigation__tab-ctrl" data-aos="fade-up">
             <button>2D Capabilities</button>
             <button className="active color-gradient">3D Capabilities</button>
           </div>
           <div className="home__navigation__tab">
             <div className="text">
-              <h3 className="color-gradient">3D Interaction</h3>
-              <p>
+              <h3 className="color-gradient" data-aos="fade-up">
+                3D Interaction
+              </h3>
+              <p data-aos="fade-up">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut
               </p>
 
-              <a href="#fluid-ride" className="btn--primary">
+              <a data-aos="fade-up" href="#fluid-ride" className="btn--primary">
                 Experience Fluid in 3D
                 <img src={arrowIcon} alt="" srcSet="" />
               </a>
             </div>
-            <div className="image"></div>
+            <div className="image" data-aos="fade-left"></div>
           </div>
         </div>
       </div>
@@ -341,10 +343,10 @@ export default function Index() {
       <div className="app-container home__magic-container">
         <div className="app-container__section home__magic">
           <div className="text">
-            <h3 className="color-gradient">
+            <h3 className="color-gradient" data-aos="fade-up">
               Like Magic, <br /> But Real
             </h3>
-            <p>
+            <p data-aos="fade-up">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut
             </p>
@@ -365,22 +367,26 @@ export default function Index() {
             ))}
           </div>
           <div className="text">
-            <h3 className="text__heading">
+            <h3 className="text__heading" data-aos="fade-up">
               Usable in{" "}
-              <strong className="color-gradient">Many Industries.</strong>
+              <strong className="color-gradient">
+                Many <br /> Industries.
+              </strong>
             </h3>
-            <p className="text__description">
+            <p className="text__description" data-aos="fade-up">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod
             </p>
 
-            {industries.map((i) => (
-              <UsableIn
-                onChange={handleIndustryChange}
-                checked={i.checked}
-                {...i}
-              />
-            ))}
+            <div data-aos="fade-up">
+              {industries.map((i) => (
+                <UsableIn
+                  onChange={handleIndustryChange}
+                  checked={i.checked}
+                  {...i}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

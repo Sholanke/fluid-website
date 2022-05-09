@@ -1,0 +1,115 @@
+.about__hero {
+  text-align: center;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h1 {
+    font-size: 58px;
+    line-height: 1.2;
+    letter-spacing: -2px;
+  }
+
+  p {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    line-height: 1.9;
+    opacity: 0.8;
+  }
+}
+
+.about__vision {
+  margin-bottom: 180px;
+  padding-top: 150px;
+  padding-bottom: 150px;
+
+  .animate-text {
+    > span {
+      overflow: hidden;
+      display: inline-block;
+      height: fit-content;
+      line-height: 1;
+
+      > span {
+        transition-duration: 0s !important;
+        transition-delay: 0s !important;
+        display: inline-block;
+        transform: translate(0, 55px);
+        line-height: 1;
+      }
+    }
+
+    &[data-aos="fade-animation"] {
+      &.aos-animate {
+        > span {
+          > span {
+            transition-duration: 0.3s !important;
+            transition-delay: var(--transitionDelay) !important;
+            transform: translate(0, 0);
+          }
+        }
+      }
+    }
+  }
+
+  &-container {
+    background: #4365f80c;
+  }
+
+  p {
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    opacity: 0.5;
+  }
+
+  h1 {
+    font-size: 55px;
+    letter-spacing: -1.8px;
+    line-height: 1.5;
+    font-weight: 600;
+    max-width: 843px;
+  }
+}
+
+.about__values {
+  overflow: hidden;
+  padding-bottom: 180px;
+  display: flex;
+  flex-direction: column;
+
+  &-title {
+    letter-spacing: 6px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    opacity: 0.5;
+  }
+  &__slider {
+    display: flex;
+    align-items: center;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    transform: translate(var(--scrollY), 0);
+
+    &:nth-child(even) {
+      align-self: flex-end;
+    }
+
+    h1 {
+      letter-spacing: -2px;
+      font-weight: 600;
+      margin: 0 30px;
+      opacity: 0.8;
+      font-size: 48px;
+
+      &:nth-child(even) {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
