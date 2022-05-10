@@ -68,8 +68,7 @@ export default function TheNavBar() {
         </ul>
 
         <div>
-          <button className="btn--primary">Log In</button>
-          <button className="btn--invert">Register</button>
+          <button className="btn--primary">Join early access</button>
         </div>
       </div>
     </div>

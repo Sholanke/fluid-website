@@ -17,29 +17,23 @@ export default function Footer() {
               Check out the Fluid business or developer pages to get started.{" "}
             </p>
 
-            <div className="home__ready__btn-holder">
-              <Link to="/developer" className="btn--primary">
-                For Developers
-                <img
-                  style={{ transform: "rotate(-90deg)" }}
-                  src={arrowIcon}
-                  alt=""
-                  srcSet=""
-                />
-              </Link>
-              <Link
-                to="/business"
-                style={{ background: "#5C98FF" }}
-                className="btn--primary"
-              >
-                For Businesses
-                <img
-                  style={{ transform: "rotate(-90deg)" }}
-                  src={arrowIcon}
-                  alt=""
-                  srcSet=""
-                />
-              </Link>
+            <div className="home__ready__form">
+              <label>
+                <span>FULL NAME</span>
+                <input type="text" placeholder="Enter your full name here" />
+              </label>
+
+              <label>
+                <span>EMAIL ADDRESS</span>
+                <input type="text" placeholder="Enter your full name here" />
+              </label>
+
+              <label>
+                <span>WEBSITE LINK (URL) (OPTIONAL)</span>
+                <input type="text" placeholder="Enter your full name here" />
+              </label>
+
+              <button className="btn--primary">Join early access</button>
             </div>
           </div>
 
@@ -114,9 +108,7 @@ export default function Footer() {
 
         <div className="news-letter-container">
           <div className="news-letter">
-            <h2 className="news-letter__heading">
-            Get In Touch
-            </h2>
+            <h2 className="news-letter__heading">Get In Touch</h2>
             <p className="news-letter__description">
               Receive emails from us featuring new features and updates
             </p>
@@ -150,7 +142,11 @@ export default function Footer() {
                 <h4>Follow Us</h4>
                 <ul>
                   <li>
-                    <a href="https://twitter.com/FluidComputer" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://twitter.com/FluidComputer"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <svg
                         width="20"
                         height="20"
@@ -167,7 +163,11 @@ export default function Footer() {
                   </li>
 
                   <li>
-                    <a href="https://www.linkedin.com/company/fluid-computer" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://www.linkedin.com/company/fluid-computer"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <svg
                         width="20"
                         height="20"
@@ -201,7 +201,11 @@ export default function Footer() {
                   </li>
 
                   <li>
-                    <a href="https://www.instagram.com/fluidcomputer_official/" target="_blank" rel="noreferrer">
+                    <a
+                      href="https://www.instagram.com/fluidcomputer_official/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       <svg
                         width="20"
                         height="20"

@@ -4,7 +4,7 @@
   justify-content: space-between;
 
   &__scroll-arrow {
-    margin-left: 215px;
+    margin-left: 205px;
     margin-top: 20px;
 
     path {
@@ -84,8 +84,7 @@
 
     &__play {
       position: absolute;
-      top: 0;
-      left: 0;
+
       display: flex;
       align-items: center;
       justify-content: space-evenly;
@@ -97,11 +96,11 @@
 
       p {
         position: absolute;
-        bottom: 20px;
-        left: -35px;
-        background: #fff;
+        bottom: 30px;
+        left: -45px;
+        background: #0a0a44;
         padding: 5px 0;
-        color: var(--primary-color);
+        color: #fff;
         border-radius: 100vh;
       }
     }
@@ -182,8 +181,8 @@
         border: none;
 
         svg {
-          height: 42px;
-          width: 42px;
+          height: 27px;
+          width: 27px;
         }
       }
       p {
@@ -236,6 +235,10 @@
 .home__ride {
   padding-top: 180px;
 
+  &.simulation-container {
+    padding-top: 100px;
+  }
+
   h2 {
     font-size: 40px;
     letter-spacing: -1.7px;
@@ -248,21 +251,68 @@
   &__video {
     height: 539px;
     margin-top: 36px;
+    position: relative;
     // background: #f1f4ff;
     border-radius: 20px;
     margin-bottom: 142px;
-    background-image: url("https://www.u-buy.com.ng/productimg/?image=aHR0cHM6Ly9pNS53YWxtYXJ0aW1hZ2VzLmNvbS9hc3IvYTZhMzZlYTItMzM1Ni00OTk5LTg3MzAtNDk4ZTVhZDIyNWZhXzIuNjhhMzZhOTUzMTMzNjJhZGQzNjA3M2Y2ZmYxN2Q5ZDQuanBlZw.jpg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     box-shadow: 0 0 100px 10px rgba(112, 112, 112, 0.075);
+
+    &:not(.simulation) {
+      background: #0a0a44;
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+      justify-content: center;
+    }
+    &.simulation {
+      background-image: url("https://www.u-buy.com.ng/productimg/?image=aHR0cHM6Ly9pNS53YWxtYXJ0aW1hZ2VzLmNvbS9hc3IvYTZhMzZlYTItMzM1Ni00OTk5LTg3MzAtNDk4ZTVhZDIyNWZhXzIuNjhhMzZhOTUzMTMzNjJhZGQzNjA3M2Y2ZmYxN2Q5ZDQuanBlZw.jpg");
+    }
+  }
+}
+
+.home-video-arrows {
+  max-width: fit-content;
+  margin: 0 auto;
+  margin-top: 45px;
+
+  svg {
+    g {
+      path {
+        animation-name: fade;
+        animation-iteration-count: infinite;
+        animation-fill-mode: forwards;
+        animation-duration: 1s;
+
+        &:nth-child(2) {
+          animation-delay: 0.2s;
+        }
+        &:nth-child(3) {
+          animation-delay: 0.4s;
+        }
+      }
+
+      @keyframes fade {
+        0% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.4;
+        }
+      }
+    }
   }
 }
 
 .home__why {
   &-container {
-    padding-top: 70px;
-    padding-bottom: 70px;
+    padding-top: 140px;
+    padding-bottom: 140px;
     background: #4365f80c;
     margin-bottom: 150px;
   }

@@ -180,6 +180,86 @@ export default function Index() {
           </div>
 
           <div className="home__hero__image">
+            <div className="home__hero__image__illustration">
+              {heroSliderList.map(({ src }, index) => (
+                <div
+                  className={`image-container ${
+                    index === activeIndex ? "active" : ""
+                  } ${index < activeIndex ? "done" : ""}`}
+                >
+                  <img src={src} alt="" srcset="" key={index} />
+                </div>
+              ))}
+            </div>
+            <div className="home__hero__image__line"></div>
+            <div className="home__hero__image__text">
+              <button onClick={previous}>
+                <svg
+                  width="27"
+                  height="27"
+                  viewBox="0 0 27 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="13.5"
+                    cy="13.5"
+                    r="13.5"
+                    transform="rotate(-90 13.5 13.5)"
+                    fill="#072AC8"
+                  />
+                  <path
+                    d="M9 15L13 11L17 15"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <p>
+                {heroSliderList.map(({ text }, index) => (
+                  <span className={generateClass(index)} key={index}>
+                    {text}
+                  </span>
+                ))}
+              </p>
+              <button onClick={next}>
+                <svg
+                  width="27"
+                  height="27"
+                  viewBox="0 0 27 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="13.5"
+                    cy="13.5"
+                    r="13.5"
+                    transform="rotate(90 13.5 13.5)"
+                    fill="#072AC8"
+                  />
+                  <path
+                    d="M18 12L14 16L10 12"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="app-container">
+        <div className="app-container__section home__ride video">
+          <h2 data-aos="fade-up">
+            Learn about <strong className="color-gradient">Fluid.</strong>
+          </h2>
+
+          <div className="home__ride__video" data-aos="fade-up">
             <div className="home__hero__image__play">
               <svg
                 width="142"
@@ -208,87 +288,78 @@ export default function Index() {
 
               <p>Play Video</p>
             </div>
-
-            <div className="home__hero__image__illustration">
-              {heroSliderList.map(({ src }, index) => (
-                <div
-                  className={`image-container ${
-                    index === activeIndex ? "active" : ""
-                  } ${index < activeIndex ? "done" : ""}`}
-                >
-                  <img src={src} alt="" srcset="" key={index} />
-                </div>
-              ))}
-            </div>
-            <div className="home__hero__image__line"></div>
-            <div className="home__hero__image__text">
-              <button onClick={previous}>
-                <svg
-                  width="27"
-                  height="27"
-                  viewBox="0 0 27 27"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="13.5"
-                    cy="13.5"
-                    r="13.5"
-                    transform="rotate(-90 13.5 13.5)"
-                    fill="white"
-                  />
-                  <path
-                    d="M9 15L13 11L17 15"
-                    stroke="#072AC8"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-              <p>
-                {heroSliderList.map(({ text }, index) => (
-                  <span className={generateClass(index)} key={index}>
-                    {text}
-                  </span>
-                ))}
-              </p>
-              <button onClick={next}>
-                <svg
-                  width="27"
-                  height="27"
-                  viewBox="0 0 27 27"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <circle
-                    cx="13.5"
-                    cy="13.5"
-                    r="13.5"
-                    transform="rotate(90 13.5 13.5)"
-                    fill="white"
-                  />
-                  <path
-                    d="M18 12L14 16L10 12"
-                    stroke="#072AC8"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-            </div>
           </div>
         </div>
       </div>
 
+      <div className="app-container home-video-arrows">
+        <svg
+          width="640"
+          height="98"
+          viewBox="0 0 640 98"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g>
+            <path
+              d="M41 5L23 23L5 5"
+              stroke="#DAE0FA"
+              stroke-width="9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M41 40L23 58L5 40"
+              stroke="#DAE0FA"
+              stroke-width="9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M41 75L23 93L5 75"
+              stroke="#DAE0FA"
+              stroke-width="9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
+
+          <g>
+            <path
+              d="M635 5L617 23L599 5"
+              stroke="#DAE0FA"
+              stroke-width="9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M635 40L617 58L599 40"
+              stroke="#DAE0FA"
+              stroke-width="9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M635 75L617 93L599 75"
+              stroke="#DAE0FA"
+              stroke-width="9"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
+        </svg>
+      </div>
+
       <div className="app-container" id="fluid-ride">
-        <div className="app-container__section home__ride">
+        <div className="app-container__section home__ride simulation-container">
           <h2 data-aos="fade-up">
             Take <strong className="color-gradient">Fluid</strong> for a ride.
           </h2>
 
-          <div className="home__ride__video" data-aos="fade-up"></div>
+          <div
+            className="home__ride__video simulation"
+            data-aos="fade-up"
+          ></div>
         </div>
       </div>
 

@@ -236,22 +236,22 @@ export default function index() {
 
               <label className="simulator__form__input" htmlFor="">
                 <span>Email Address</span>
-                <input type="text" placeholder="Enter first name here" />
+                <input type="text" placeholder="Enter email address here" />
               </label>
 
               <label className="simulator__form__input" htmlFor="">
                 <span>Website Link (URL) (optional)</span>
-                <input type="text" placeholder="Enter first name here" />
+                <input type="text" placeholder="Enter website link here" />
               </label>
 
               <label className="simulator__form__input" htmlFor="">
                 <span>Company Name</span>
-                <input type="text" placeholder="Enter first name here" />
+                <input type="text" placeholder="Enter company name here" />
               </label>
 
               <label className="simulator__form__input" htmlFor="">
                 <span>Position</span>
-                <input type="text" placeholder="Enter first name here" />
+                <input type="text" placeholder="Enter position here" />
               </label>
 
               {/* <div className="simulator__form__radio-boxes">
@@ -267,7 +267,7 @@ export default function index() {
               </div> */}
             </div>
 
-            <button className="btn--primary">Join Fluid Today</button>
+            <button className="btn--primary">Join early access</button>
           </form>
         </div>
       </div>

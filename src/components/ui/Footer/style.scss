@@ -1,13 +1,9 @@
 .home__ready {
-  display: flex;
-  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   &-container {
     background: #0a0a44;
-  }
-
-  .image {
-    min-height: 600px;
   }
 
   .text {
@@ -33,17 +29,47 @@
     }
   }
 
-  &__btn-holder {
-    display: flex;
-    align-items: center;
-    margin-top: 50px;
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 48px;
+    margin-top: 75px;
+    max-width: 704px;
+    align-items: flex-end;
 
-    .btn--primary {
-      font-size: 16px;
-      margin-right: 20px;
+    > button {
+      height: fit-content;
+      width: fit-content;
+      padding: {
+        right: 40px;
+        left: 40px;
+      }
+    }
 
-      img {
-        margin-left: 30px;
+    label {
+      span {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        margin-left: 20px;
+        text-transform: uppercase;
+      }
+
+      input {
+        display: block;
+        border: 0;
+        background: rgba(255, 255, 255, 0.925);
+        font-size: 16px;
+        border-radius: 100vh;
+        padding: 19px 20px;
+        width: 100%;
+        color: #253858 !important;
+
+        &::placeholder {
+          color: #253858;
+          opacity: 0.6;
+        }
       }
     }
   }
