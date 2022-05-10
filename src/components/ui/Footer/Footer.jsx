@@ -1,6 +1,5 @@
 import React from "react";
 import "./style.scss";
-import arrowIcon from "../../../assets/images/arrow-down.svg";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
