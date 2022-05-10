@@ -66,7 +66,7 @@ export default function App() {
                 <main>
                   <TheNavBar />
                   <SimulatorPage />
-                  <Footer />
+                  <Footer hasForm={false} />
                 </main>
               }
             />

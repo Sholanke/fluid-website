@@ -2,42 +2,44 @@ import React from "react";
 import "./style.scss";
 import { Link } from "react-router-dom";
 
-export default function Footer() {
+export default function Footer({ hasForm = true }) {
   return (
     <>
-      <div className="app-container home__ready-container">
-        <div className="app-container__section home__ready">
-          <div className="text">
-            <h1>
-              Are you ready <br />{" "}
-              <strong className="color-gradient">to go Fluid?</strong>
-            </h1>
-            <p>
-              Check out the Fluid business or developer pages to get started.{" "}
-            </p>
+      <div className="app-container home__ready-container" id="join">
+        {hasForm && (
+          <div className="app-container__section home__ready">
+            <div className="text">
+              <h1>
+                Are you ready <br />{" "}
+                <strong className="color-gradient">to go Fluid?</strong>
+              </h1>
+              <p>
+                Check out the Fluid business or developer pages to get started.{" "}
+              </p>
 
-            <div className="home__ready__form">
-              <label>
-                <span>FULL NAME</span>
-                <input type="text" placeholder="Enter your full name here" />
-              </label>
+              <div className="home__ready__form">
+                <label>
+                  <span>FULL NAME</span>
+                  <input type="text" placeholder="Enter your full name here" />
+                </label>
 
-              <label>
-                <span>EMAIL ADDRESS</span>
-                <input type="text" placeholder="Enter your full name here" />
-              </label>
+                <label>
+                  <span>EMAIL ADDRESS</span>
+                  <input type="text" placeholder="Enter your full name here" />
+                </label>
 
-              <label>
-                <span>WEBSITE LINK (URL) (OPTIONAL)</span>
-                <input type="text" placeholder="Enter your full name here" />
-              </label>
+                <label>
+                  <span>WEBSITE LINK (URL) (OPTIONAL)</span>
+                  <input type="text" placeholder="Enter your full name here" />
+                </label>
 
-              <button className="btn--primary">Join early access</button>
+                <button className="btn--primary">Join early access</button>
+              </div>
             </div>
-          </div>
 
-          <div className="image"></div>
-        </div>
+            <div className="image"></div>
+          </div>
+        )}
       </div>
       <div className="app-container home__footer">
         <div className="links-container">

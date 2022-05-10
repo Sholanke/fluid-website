@@ -68,7 +68,9 @@ export default function TheNavBar() {
         </ul>
 
         <div>
-          <button className="btn--primary">Join early access</button>
+          <a href="#join" className="btn--primary">
+            Join early access
+          </a>
         </div>
       </div>
     </div>
