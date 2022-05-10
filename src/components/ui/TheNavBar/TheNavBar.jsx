@@ -49,25 +49,25 @@ export default function TheNavBar() {
           </svg>
         </NavLink>
 
-        <ul>
-          <li>
-            <NavLink to="/">Home</NavLink>
-          </li>
-          <li>
-            <NavLink to="/simulator">Simulator</NavLink>
-          </li>
-          <li>
-            <NavLink to="/business">For Businesses</NavLink>
-          </li>
-          <li>
-            <NavLink to="/developer">For Developers</NavLink>
-          </li>
-          <li>
-            <NavLink to="/about">About Fluid</NavLink>
-          </li>
-        </ul>
-
         <div>
+          <ul>
+            <li>
+              <NavLink to="/">Home</NavLink>
+            </li>
+            <li>
+              <NavLink to="/simulator">Simulator</NavLink>
+            </li>
+            <li>
+              <NavLink to="/business">For Businesses</NavLink>
+            </li>
+            <li>
+              <NavLink to="/developer">For Developers</NavLink>
+            </li>
+            <li>
+              <NavLink to="/about">About Fluid</NavLink>
+            </li>
+          </ul>
+
           <a href="#join" className="btn--primary">
             Join early access
           </a>
