@@ -34,9 +34,10 @@ export default function Index() {
 
       <div className="app-container developer__code-container">
         <div className="app-container__section developer__code">
-          <pre>
-            <code className="language-js">
-              {`// Install with: npm i Fluid-node-v3
+          <div>
+            <pre>
+              <code className="language-js">
+                {`// Install with: npm i Fluid-node-v3
 
             // Add Fluid as a dependency to your project
             const Fluid = require('Fluid-node-v3');
@@ -55,8 +56,9 @@ export default function Index() {
                  ... 
             };
             `}
-            </code>
-          </pre>
+              </code>
+            </pre>
+          </div>
 
           <div className="text">
             <h3>

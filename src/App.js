@@ -103,8 +103,6 @@ export default function App() {
           </Routes>
         </CSSTransition>
       </TransitionGroup>
-
-      {/* <Footer /> */}
     </>
   );
 }

@@ -1,6 +1,8 @@
 @import "../assets/fonts/stylesheet.scss";
 @import "../assets/poppins/stylesheet.scss";
 
+@import "./mixin.scss";
+
 :root {
   --primary-color: #072ac8;
 }
@@ -33,6 +35,11 @@ main {
 .app-container {
   padding-left: 60px;
   padding-right: 60px;
+
+  @include mobile {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
   &__section {
     max-width: 1138px;

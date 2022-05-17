@@ -1,12 +1,8 @@
+@import "../../../styles/mixin.scss";
+
 .the-nav-bar {
-  // position: relative;
   z-index: 4;
   background: #fff;
-  // box-shadow: 0 0 30px rgba(99, 94, 141, 0.151);
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
 
   &__logo {
     svg {
@@ -27,6 +23,10 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     ul {
@@ -34,7 +34,7 @@
       align-items: center;
       justify-content: space-between;
       margin-right: 30px;
-      
+
       li {
         margin: 0 18px;
 
