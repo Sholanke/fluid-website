@@ -81,7 +81,8 @@ export default function index() {
                 fill-opacity="0.5"
               />
             </svg>
-            <div>
+
+            {/* <div>
               <button>
                 <svg
                   width="30"
@@ -133,9 +134,9 @@ export default function index() {
                     d="M3.28125 3.28125H11.7188V11.7188H3.28125V3.28125ZM3.28125 18.2812H11.7188V26.7188H3.28125V18.2812ZM18.2812 18.2812H26.7188V26.7188H18.2812V18.2812ZM18.2812 3.28125H26.7188V11.7188H18.2812V3.28125Z"
                     stroke="#0A0A44"
                     stroke-opacity="0.85"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </button>
@@ -154,8 +155,8 @@ export default function index() {
                     fill-opacity="0.85"
                   />
                   <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
                     d="M8.75 3.75H21.25V26.25H8.75V3.75ZM11.25 6.25V23.75H18.75V6.25H11.25Z"
                     fill="#0A0A44"
                     fill-opacity="0.85"
@@ -180,17 +181,17 @@ export default function index() {
                     d="M16.7225 16.9206V21.1893C16.7224 21.275 16.7392 21.3598 16.772 21.439C16.8047 21.5181 16.8527 21.5901 16.9132 21.6507C16.9738 21.7113 17.0457 21.7594 17.1248 21.7922C17.2039 21.825 17.2887 21.8418 17.3744 21.8418H20.3213C20.407 21.8419 20.4919 21.8251 20.5711 21.7923C20.6503 21.7596 20.7222 21.7115 20.7828 21.6509C20.8435 21.5903 20.8915 21.5183 20.9243 21.4391C20.957 21.3599 20.9739 21.275 20.9738 21.1893V15.8675H21.8288C22.0296 15.8674 22.2256 15.8057 22.3903 15.6908C22.555 15.5758 22.6805 15.4131 22.7499 15.2246C22.8192 15.0361 22.8291 14.8309 22.7782 14.6366C22.7272 14.4423 22.6179 14.2683 22.465 14.1381L15.7788 8.44433C15.5615 8.25932 15.2854 8.15771 15 8.15771C14.7146 8.15771 14.4386 8.25932 14.2213 8.44433L7.53502 14.1381C7.38177 14.2682 7.27215 14.4422 7.22101 14.6366C7.16987 14.831 7.17966 15.0364 7.24907 15.225C7.31847 15.4137 7.44414 15.5764 7.60908 15.6914C7.77402 15.8063 7.97026 15.8677 8.17127 15.8675H9.02627V21.19C9.02644 21.3629 9.09526 21.5287 9.21761 21.6509C9.33996 21.7732 9.50583 21.8418 9.67877 21.8418H12.625C12.7979 21.8418 12.9637 21.7732 13.086 21.6509C13.2082 21.5287 13.2769 21.3628 13.2769 21.19V16.9212L16.7225 16.9206Z"
                     stroke="#0A0A44"
                     stroke-opacity="0.85"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M17.7625 3.4375H4.6875C4.35598 3.4375 4.03804 3.5692 3.80362 3.80362C3.5692 4.03804 3.4375 4.35598 3.4375 4.6875V25.3125C3.4375 25.644 3.5692 25.962 3.80362 26.1964C4.03804 26.4308 4.35598 26.5625 4.6875 26.5625H25.3125C25.644 26.5625 25.962 26.4308 26.1964 26.1964C26.4308 25.962 26.5625 25.644 26.5625 25.3125V12.2375"
                     stroke="#0A0A44"
                     stroke-opacity="0.85"
-                    stroke-width="1.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </button>
@@ -210,7 +211,7 @@ export default function index() {
                   />
                 </svg>
               </button>
-            </div>
+            </div> */}
           </div>
 
           <div className=" simulator__hero__video"></div>
@@ -223,8 +224,8 @@ export default function index() {
             <strong className="color-gradient">Like</strong> the Simulation?
           </h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut
+            Sign up for the Fluid Preview. We'll get in touch to learn more
+            about your needs, and walk through next steps.
           </p>
 
           <form action="">
@@ -267,7 +268,7 @@ export default function index() {
               </div> */}
             </div>
 
-            <button className="btn--primary">Join early access</button>
+            <button className="btn--primary">Join the Waitlist</button>
           </form>
         </div>
       </div>

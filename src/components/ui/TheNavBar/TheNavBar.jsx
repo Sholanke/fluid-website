@@ -3,6 +3,11 @@ import { NavLink } from "react-router-dom";
 import "./style.scss";
 
 export default function TheNavBar() {
+  const scrollToFooterForm = () => {
+    const footer = document.querySelector(".home__ready-container");
+    footer.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <div className="app-container the-nav-bar">
       <div className="app-container__section the-nav-bar__section">
@@ -58,19 +63,19 @@ export default function TheNavBar() {
               <NavLink to="/simulator">Simulator</NavLink>
             </li>
             <li>
-              <NavLink to="/business">For Businesses</NavLink>
+              <NavLink to="/business">Use Cases</NavLink>
             </li>
             <li>
-              <NavLink to="/developer">For Developers</NavLink>
+              <NavLink to="/developer">Developers</NavLink>
             </li>
             <li>
-              <NavLink to="/about">About Fluid</NavLink>
+              <NavLink to="/about">Company</NavLink>
             </li>
           </ul>
 
-          <a href="#join" className="btn--primary">
-            Join early access
-          </a>
+          <button className="btn--primary" onClick={scrollToFooterForm}>
+            Join the Waitlist
+          </button>
         </div>
       </div>
     </div>

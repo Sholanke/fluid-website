@@ -3,7 +3,7 @@ import "./style.scss";
 import { Application } from "@splinetool/runtime";
 
 export default function Index() {
-  const vision = `To elevate human experiences using AI that understands the physical world.`;
+  const vision = `Elevate experiences with technology that understands us.`;
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
@@ -33,13 +33,13 @@ export default function Index() {
       <div className="app-container about__hero-section">
         <div className="app-container__section about__hero">
           <h1>
-            Make the World <br />
+            Make the World more
+            <br />
             <strong className="color-gradient">Human & Inspiring</strong>
           </h1>
           <p>
-            As Video AI (Computer Vision) continues to improve exponentially,
-            it’s going to transform and continue transforming many domains of
-            our life. Fluid aims to drive this transformation.
+            AI is fast-approaching Human-Level Understanding. With it, comes
+            more opportunities than ever before to make life better.
           </p>
         </div>
       </div>
@@ -48,21 +48,23 @@ export default function Index() {
         <div className="app-container__section about__vision">
           <p>VISION</p>
           <h1 className="animate-text" data-aos="fade-animation">
-            {vision.split("").map((letter, index) => (
-              <span
-                style={{
-                  display: letter === " " ? "inline" : "inline-block",
-                }}
-              >
+            {vision.split(" ").map((letter, index) => (
+              <>
                 <span
                   style={{
-                    "--transitionDelay": `${index * 0.02}s`,
                     display: letter === " " ? "inline" : "inline-block",
                   }}
                 >
-                  {letter}
-                </span>
-              </span>
+                  <span
+                    style={{
+                      "--transitionDelay": `${index * 0.1}s`,
+                      display: letter === " " ? "inline" : "inline-block",
+                    }}
+                  >
+                    {letter}
+                  </span>
+                </span>{" "}
+              </>
             ))}
           </h1>
         </div>

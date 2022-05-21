@@ -10,11 +10,13 @@ export default function Footer({ hasForm = true }) {
           <div className="app-container__section home__ready">
             <div className="text">
               <h1>
-                Are you ready <br />{" "}
-                <strong className="color-gradient">to go Fluid?</strong>
+                Ready to go{" "}
+                <strong className="color-gradient">touchless?</strong>
               </h1>
               <p>
-                Check out the Fluid business or developer pages to get started.{" "}
+                Sign up for the Fluid Preview. <br />
+                We'll get in touch to learn more about your needs, and walk
+                through next steps.
               </p>
 
               <div className="home__ready__form">
@@ -33,7 +35,7 @@ export default function Footer({ hasForm = true }) {
                   <input type="text" placeholder="Enter your full name here" />
                 </label>
 
-                <button className="btn--primary">Join early access</button>
+                <button className="btn--primary">Join the Waitlist</button>
               </div>
             </div>
 
@@ -98,11 +100,16 @@ export default function Footer({ hasForm = true }) {
                 <Link to="/simulator">Simulator</Link>
               </li>
               <li>
-                <Link to="/business">Businesses</Link>
+                <Link to="/business">Use Cases</Link>
               </li>
               <li>
                 <Link to="/developer">Developers</Link>
               </li>
+              <li>
+                <Link to="/about">Company</Link>
+              </li>
+
+              <div>© 2022 by Fluid Inc.</div>
             </ul>
           </div>
         </div>
@@ -258,7 +265,7 @@ export default function Footer({ hasForm = true }) {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    Terms of us
+                    Terms of use
                   </a>
                 </li>
               </ul>
